@@ -123,7 +123,7 @@ class Enemy(pygame.sprite.Sprite):
         super().__init__()
 
         img = pygame.image.load(os.path.join("Assets", "enemy2.png")).convert_alpha()
-        self.image = pygame.transform.scale(img, (90, 120))  # Он выше мусорки
+        self.image = pygame.transform.scale(img, (90, 120))
         # Random spawn position off-screen
         self.rect = self.image.get_rect(midbottom=(random.randint(WIDTH + 100, WIDTH + 300), HEIGHT - 60))
         self.mask = pygame.mask.from_surface(self.image)
@@ -149,7 +149,7 @@ class Trash(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         img1 = pygame.image.load(os.path.join("Assets", "trash.png")).convert_alpha()
-        self.image = pygame.transform.scale(img1, (200, 90))  # Он выше мусорки
+        self.image = pygame.transform.scale(img1, (200, 90))
 
         self.rect = self.image.get_rect(midbottom = (random.randint(WIDTH + 20, WIDTH + 200), HEIGHT - 60))
 
@@ -165,7 +165,7 @@ class Scooter(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         img1 = pygame.image.load(os.path.join("Assets", "e-scooter.png")).convert_alpha()
-        self.image = pygame.transform.scale(img1, (120, 60))  # Он выше мусорки
+        self.image = pygame.transform.scale(img1, (120, 60))
         self.rect = self.image.get_rect(midbottom = (random.randint(WIDTH + 20, WIDTH + 200), HEIGHT - 60))
         self.mask = pygame.mask.from_surface(self.image)
         self.speed = 5

@@ -90,7 +90,7 @@ def draw_window(game_active, score, high_score, money, death_cause, bg_imgs_list
         display_score()
         display_high_score(high_score)
         # Draw UI (Money)
-        money_surf = test_font.render(f'Pfand: {money}€', False, (138, 226, 52))  # Зеленый цвет
+        money_surf = test_font.render(f'Pfand: {money}€', False, (138, 226, 52))  # Green color
         screen.blit(money_surf, (20, 10))
     # 3. State: Menu or GAME OVER
     else:
@@ -102,12 +102,12 @@ def draw_window(game_active, score, high_score, money, death_cause, bg_imgs_list
 
         #Main menu
         if death_cause is None:
-            # Название игры
-            title = test_font.render("BERLIN RUNNER", True, (255, 215, 0))  # Золотой цвет
+            # Name of Game
+            title = test_font.render("BERLIN RUNNER", True, (255, 215, 0))  # Gold color
             title_rect = title.get_rect(center=(WIDTH / 2, HEIGHT / 2 - 50))
             screen.blit(title, title_rect)
 
-            # Инструкция
+            # Instruction
             instr = test_font.render("Press SPACE to Start", True, (255, 255, 255))
             instr_rect = instr.get_rect(center=(WIDTH / 2, HEIGHT / 2 + 50))
             screen.blit(instr, instr_rect)
